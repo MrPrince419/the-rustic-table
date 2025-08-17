@@ -1,0 +1,180 @@
+/* The Rustic Table - Custom Styles */
+
+/* Base Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f9f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.handwritten {
+    font-family: 'Caveat', cursive;
+}
+
+/* Background Patterns */
+.textured-bg {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+}
+
+.textured-button {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+}
+
+/* Irregular Shapes */
+.irregular-border {
+    border-radius: 85% 15% 90% 10% / 10% 90% 10% 90%;
+}
+
+.irregular-shadow {
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+}
+
+/* Form Styles */
+.input-field {
+    border-radius: 15px 5px 20px 5px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Menu Items */
+.menu-item {
+    transform: rotate(-0.5deg);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Map Frame */
+.map-frame {
+    border: 8px solid #e8d8c0;
+    border-radius: 10px 30px 10px 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Social Icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Typography */
+.section-title {
+    letter-spacing: -0.5px;
+    word-spacing: 2px;
+}
+
+/* Loading Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #b45309;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #92400e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #b45309;
+    border: 2px solid #b45309;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: #b45309;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.nav-sticky {
+    backdrop-filter: blur(10px);
+    background-color: rgba(120, 53, 15, 0.95);
+}
+
+/* Hero Image Parallax Effect */
+.hero-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Card Animations */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .irregular-border {
+        border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles if needed */
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu | The Rustic Table</title>
+    <meta name="description" content="Explore our complete seasonal menu featuring locally sourced ingredients and artisan dishes.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="bg-amber-900 text-amber-50 py-6 px-4 md:px-8 textured-bg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="index.html" class="text-3xl md:text-4xl font-bold handwritten hover:text-amber-200 transition">The Rustic Table</a>
+                <p class="text-amber-200 italic">Farm-to-fork dining since 2012</p>
+            </div>
+            <nav class="flex space-x-1 md:space-x-4">
+                <a href="index.html" class="px-3 py-1 rounded-full bg-amber-800 hover:bg-amber-700 transition">Home</a>
+                <a href="index.html#about" class="px-3 py-1 rounded-full bg-amber-800 hover:bg-amber-700 transition">Our Story</a>
+                <a href="menu.html" class="px-3 py-1 rounded-full bg-amber-700 text-amber-100">Full Menu</a>
+                <a href="reservations.html" class="px-3 py-1 rounded-full bg-amber-800 hover:bg-amber-700 transition">Reservations</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 px-4 md:px-8 bg-amber-100">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-amber-900 handwritten">Our Complete Menu</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Farm-fresh ingredients, seasonal specialties, and time-honored recipes crafted with love.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#starters" class="btn-secondary">Starters</a>
+                <a href="#mains" class="btn-secondary">Main Courses</a>
+                <a href="#desserts" class="btn-secondary">Desserts</a>
+                <a href="#beverages" class="btn-secondary">Beverages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-16 px-4 md:px-8 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            
+            <!-- Starters -->
+            <div id="starters" class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-900 section-title handwritten">To Start</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Farmhouse Board</h3>
+                            <span class="font-bold text-amber-700 text-lg">$14</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Local artisan cheeses, house-made pickles, seasonal fruit compote, honey from our neighbor's apiary, and fresh-baked sourdough bread</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full mr-2">Vegetarian</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Heirloom Tomato Salad</h3>
+                            <span class="font-bold text-amber-700 text-lg">$12</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Johnson Farm heirloom tomatoes, fresh basil, house-made ricotta, aged balsamic, and olive oil drizzle</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full mr-2">Vegetarian</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full mr-2">Local</span>
+                            <span class="bg-blue-200 px-2 py-1 rounded-full">Seasonal</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Wild Mushroom Toast</h3>
+                            <span class="font-bold text-amber-700 text-lg">$11</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Foraged wild mushrooms sautéed with thyme and garlic, served on house sourdough with herb butter</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full mr-2">Vegetarian</span>
+                            <span class="bg-blue-200 px-2 py-1 rounded-full">Seasonal</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Crispy Brussels Sprouts</h3>
+                            <span class="font-bold text-amber-700 text-lg">$10</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Flash-fried Brussels sprouts with bacon lardons, dried cranberries, and maple-Dijon vinaigrette</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div id="mains" class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-900 section-title handwritten">Main Plates</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Braised Short Rib</h3>
+                            <span class="font-bold text-amber-700 text-lg">$26</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">48-hour braised beef short rib with creamy polenta, roasted root vegetables, and red wine jus</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-red-200 px-2 py-1 rounded-full mr-2">Grass-fed</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Pan-Seared Trout</h3>
+                            <span class="font-bold text-amber-700 text-lg">$24</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Fresh rainbow trout with lemon-caper butter, fingerling potatoes, and seasonal greens</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-blue-200 px-2 py-1 rounded-full mr-2">Fresh</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Heritage Pork Chop</h3>
+                            <span class="font-bold text-amber-700 text-lg">$25</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Bone-in heritage pork chop with apple mostarda, sage, and roasted sweet potatoes</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-red-200 px-2 py-1 rounded-full mr-2">Heritage</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Vegetable Pot Pie</h3>
+                            <span class="font-bold text-amber-700 text-lg">$18</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Flaky pastry crust filled with seasonal vegetables, wild mushrooms, and creamy herb sauce</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full mr-2">Vegetarian</span>
+                            <span class="bg-blue-200 px-2 py-1 rounded-full">Seasonal</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Herb-Roasted Chicken</h3>
+                            <span class="font-bold text-amber-700 text-lg">$22</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Half roasted chicken with fresh herbs, garlic mashed potatoes, and honey-glazed carrots</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-yellow-200 px-2 py-1 rounded-full mr-2">Free-range</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl text-amber-800">Pasta Primavera</h3>
+                            <span class="font-bold text-amber-700 text-lg">$19</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">House-made fettuccine with seasonal vegetables, fresh herbs, and parmesan cream sauce</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full mr-2">Vegetarian</span>
+                            <span class="bg-blue-200 px-2 py-1 rounded-full">Seasonal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div id="desserts" class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-900 section-title handwritten">Sweet Endings</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Apple Crostata</h3>
+                            <span class="font-bold text-amber-700">$9</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Rustic apple tart with cinnamon ice cream and salted caramel drizzle</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-blue-200 px-2 py-1 rounded-full">Seasonal</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Chocolate Budino</h3>
+                            <span class="font-bold text-amber-700">$8</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Italian chocolate pudding with sea salt, olive oil, and amaretti crumble</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Berry Crisp</h3>
+                            <span class="font-bold text-amber-700">$8</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Mixed seasonal berries with oat crumble and vanilla bean cream</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-blue-200 px-2 py-1 rounded-full mr-2">Seasonal</span>
+                            <span class="bg-green-200 px-2 py-1 rounded-full">Local</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Lemon Posset</h3>
+                            <span class="font-bold text-amber-700">$7</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Silky lemon cream with shortbread cookies and fresh mint</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Cheesecake</h3>
+                            <span class="font-bold text-amber-700">$9</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">New York style cheesecake with seasonal fruit compote and graham crust</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item bg-amber-50 p-6 rounded-lg irregular-border card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-lg text-amber-800">Ice Cream Selection</h3>
+                            <span class="font-bold text-amber-700">$6</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">Three scoops of house-made ice cream - ask about today's flavors</p>
+                        <div class="text-sm text-amber-600">
+                            <span class="bg-amber-200 px-2 py-1 rounded-full">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div id="beverages" class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-amber-900 section-title handwritten">Beverages</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Hot Beverages -->
+                    <div class="bg-amber-50 p-6 rounded-lg irregular-border">
+                        <h3 class="text-xl font-bold mb-4 text-amber-800">Hot Beverages</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span>Coffee (locally roasted)</span>
+                                <span class="font-medium text-amber-700">$3</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Espresso</span>
+                                <span class="font-medium text-amber-700">$4</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Herbal Tea Selection</span>
+                                <span class="font-medium text-amber-700">$3</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Hot Chocolate</span>
+                                <span class="font-medium text-amber-700">$4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cold Beverages -->
+                    <div class="bg-amber-50 p-6 rounded-lg irregular-border">
+                        <h3 class="text-xl font-bold mb-4 text-amber-800">Cold Beverages</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span>Fresh Lemonade</span>
+                                <span class="font-medium text-amber-700">$4</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Iced Tea</span>
+                                <span class="font-medium text-amber-700">$3</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Seasonal Agua Fresca</span>
+                                <span class="font-medium text-amber-700">$5</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>House-made Sodas</span>
+                                <span class="font-medium text-amber-700">$4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wine & Beer -->
+                    <div class="bg-amber-50 p-6 rounded-lg irregular-border">
+                        <h3 class="text-xl font-bold mb-4 text-amber-800">Wine & Beer</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span>House Wine (glass)</span>
+                                <span class="font-medium text-amber-700">$8</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Local Craft Beer</span>
+                                <span class="font-medium text-amber-700">$6</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Seasonal Cocktails</span>
+                                <span class="font-medium text-amber-700">$12</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-3">
+                                <em>Ask your server about our wine pairings</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Notes -->
+            <div class="bg-amber-100 p-8 rounded-lg irregular-border text-center">
+                <h3 class="text-2xl font-bold mb-4 text-amber-900 handwritten">A Note About Our Menu</h3>
+                <div class="max-w-3xl mx-auto space-y-4 text-gray-700">
+                    <p>Our menu changes seasonally to showcase the best ingredients available from our local partners. Some items may not be available depending on seasonal availability.</p>
+                    <p>We're committed to supporting local farmers and producers within a 20-mile radius. All our meats are humanely raised, and our produce is organically grown when possible.</p>
+                    <p class="font-medium">Please inform your server of any dietary restrictions or allergies.</p>
+                </div>
+                <div class="mt-8">
+                    <a href="reservations.html" class="btn-primary">Reserve Your Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-amber-100 py-12 px-4 md:px-8">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 handwritten">The Rustic Table</h3>
+                    <p class="mb-4">Farm-to-fork dining in a cozy, welcoming atmosphere.</p>
+                    <address class="not-italic">
+                        <p>123 Farmhouse Lane</p>
+                        <p>Countryside, NY 12345</p>
+                        <p><a href="tel:+15551234567" class="text-amber-200 hover:underline">(555) 123-4567</a></p>
+                    </address>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 handwritten">Hours</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Tuesday - Thursday</span>
+                            <span>5pm - 9pm</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday - Saturday</span>
+                            <span>5pm - 10pm</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>4pm - 8pm</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Monday</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 handwritten">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="index.html#about" class="hover:underline">Our Story</a></li>
+                        <li><a href="menu.html" class="hover:underline">Full Menu</a></li>
+                        <li><a href="reservations.html" class="hover:underline">Reservations</a></li>
+                        <li><a href="about.html" class="hover:underline">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 The Rustic Table. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
