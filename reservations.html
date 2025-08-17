@@ -46,7 +46,12 @@
                 <div class="bg-amber-50 p-8 rounded-lg irregular-border">
                     <h2 class="text-2xl font-bold mb-6 text-amber-900 handwritten">Book Online</h2>
                     
-                    <form id="reservationForm" class="space-y-6">
+                    <form id="reservationForm" action="https://formspree.io/f/movlzwvv" method="POST" class="space-y-6">
+                        <!-- Hidden input to identify form type -->
+                        <input type="hidden" name="_subject" value="New Reservation Request">
+                        <input type="hidden" name="form_type" value="reservation">
+                        <input type="hidden" name="_next" value="https://mrprince419.github.io/the-rustic-table/thank-you.html">
+                        
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="firstName" class="block mb-1 font-medium text-amber-800">First Name *</label>

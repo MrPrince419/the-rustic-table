@@ -27,7 +27,7 @@
     "type": "git",
     "url": "https://github.com/MrPrince419/the-rustic-table.git"
   },
-  "homepage": "https://MrPrince419.github.io/the-rustic-table/",
+  "homepage": "https://mrprince419.github.io/the-rustic-table/",
   "engines": {
     "node": ">=14.0.0"
   }

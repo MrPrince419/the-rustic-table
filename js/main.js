@@ -94,11 +94,14 @@ function initFormValidation() {
     
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (validateForm(this)) {
-                handleFormSubmission(this);
+            // Only prevent default if validation fails
+            if (!validateForm(this)) {
+                e.preventDefault();
+                return false;
             }
+            
+            // Show loading state but allow form to submit to Formspree
+            showFormLoadingState(this);
         });
     });
 }
@@ -152,22 +155,18 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function handleFormSubmission(form) {
+function showFormLoadingState(form) {
     // Show loading state
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual API call)
+    // Re-enable button after a short delay (form will redirect to Formspree)
     setTimeout(() => {
-        showSuccessMessage('Thank you for your message! We\'ll get back to you soon.');
-        form.reset();
-        
-        // Reset button
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    }, 3000);
 }
 
 function showSuccessMessage(message) {
