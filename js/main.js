@@ -51,8 +51,8 @@ function initFadeInAnimations() {
         });
     }, observerOptions);
 
-    // Add fade-in class to elements that should animate
-    const animatedElements = document.querySelectorAll('section > div, .card, .menu-item');
+    // Add fade-in class to elements that should animate (excluding hero section divs)
+    const animatedElements = document.querySelectorAll('section:not(.hero-section) > div, .card, .menu-item');
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
@@ -257,6 +257,19 @@ function initReservationForm() {
         dateInput.min = today;
     }
     
+    // Add AJAX form submission handler
+    reservationForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
+        // Validate form first
+        if (!validateForm(this)) {
+            return false;
+        }
+        
+        // Submit form via AJAX
+        submitReservationForm(this);
+    });
+    
     // Validate time based on restaurant hours
     if (timeInput) {
         timeInput.addEventListener('change', function() {
@@ -305,6 +318,91 @@ function isValidReservationTime(dayOfWeek, time) {
     
     const schedule = hours_schedule[dayOfWeek];
     return schedule && timeInMinutes >= schedule.start && timeInMinutes <= schedule.end;
+}
+
+// AJAX form submission for reservations
+async function submitReservationForm(form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    hideFormMessages();
+    
+    try {
+        // Prepare form data
+        const formData = new FormData(form);
+        
+        // Submit to Formspree
+        const response = await fetch('https://formspree.io/f/movlzwvv', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            showFormSuccessMessage('Your reservation request has been submitted! We\'ll confirm your booking within 24 hours.');
+            form.reset(); // Clear the form
+        } else {
+            const data = await response.json();
+            if (data.errors) {
+                showFormErrorMessage('Please check your form and try again.');
+            } else {
+                showFormErrorMessage('Something went wrong. Please try again or call us directly.');
+            }
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        showFormErrorMessage('Network error. Please check your connection and try again.');
+    } finally {
+        // Reset button state
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+}
+
+// Show success message for reservations
+function showFormSuccessMessage(message) {
+    const messagesContainer = document.getElementById('form-messages');
+    const successMessage = document.getElementById('success-message');
+    const successText = document.getElementById('success-text');
+    
+    if (messagesContainer && successMessage && successText) {
+        successText.textContent = message;
+        successMessage.classList.remove('hidden');
+        messagesContainer.style.display = 'block';
+        
+        // Scroll to message
+        messagesContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
+// Show error message for reservations
+function showFormErrorMessage(message) {
+    const messagesContainer = document.getElementById('form-messages');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    
+    if (messagesContainer && errorMessage && errorText) {
+        errorText.textContent = message;
+        errorMessage.classList.remove('hidden');
+        messagesContainer.style.display = 'block';
+        
+        // Scroll to message
+        messagesContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+}
+
+// Hide form messages
+function hideFormMessages() {
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    
+    if (successMessage) successMessage.classList.add('hidden');
+    if (errorMessage) errorMessage.classList.add('hidden');
 }
 
 // Initialize reservation form when DOM is loaded

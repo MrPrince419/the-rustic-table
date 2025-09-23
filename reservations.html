@@ -46,11 +46,10 @@
                 <div class="bg-amber-50 p-8 rounded-lg irregular-border">
                     <h2 class="text-2xl font-bold mb-6 text-amber-900 handwritten">Book Online</h2>
                     
-                    <form id="reservationForm" action="https://formspree.io/f/movlzwvv" method="POST" class="space-y-6">
+                    <form id="reservationForm" method="POST" class="space-y-6">
                         <!-- Hidden input to identify form type -->
                         <input type="hidden" name="_subject" value="New Reservation Request">
                         <input type="hidden" name="form_type" value="reservation">
-                        <input type="hidden" name="_next" value="https://mrprince419.github.io/the-rustic-table/thank-you.html">
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -138,6 +137,16 @@
                             </p>
                         </div>
                     </form>
+
+                    <!-- Form Status Messages -->
+                    <div id="form-messages" class="mt-6" style="display: none;">
+                        <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                            <strong>Success!</strong> <span id="success-text"></span>
+                        </div>
+                        <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                            <strong>Error!</strong> <span id="error-text"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Contact Information & Policies -->
