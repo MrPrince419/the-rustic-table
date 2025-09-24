@@ -1,6 +1,6 @@
 # The Rustic Table - Restaurant Website
 
-A beautiful, responsive restaurant website built for The Rustic Table, featuring farm-to-fork dining with a rustic, artisan aesthetic.
+A beautiful, responsive restaurant website built for The Rustic Table, featuring farm-to-fork dining with a rustic, artisan aesthetic. cheers.
 
 ## Features
 
