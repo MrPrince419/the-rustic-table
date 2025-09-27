@@ -3,10 +3,10 @@
   command = ""
   publish = "."
   
-# Redirect root to landing page
+# Redirect root to home page
 [[redirects]]
   from = "/"
-  to = "/landing.html"
+  to = "/index.html"
   status = 200
 
 # 404 page redirect

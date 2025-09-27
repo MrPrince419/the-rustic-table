@@ -4,9 +4,7 @@
   "description": "A restaurant website for The Rustic Table - farm-to-fork dining experience",
   "main": "index.html",
   "scripts": {
-    "start": "npx live-server --port=8080 --entry-file=landing.html",
-    "build": "echo 'Static site deployed successfully'",
-    "deploy": "echo 'No build process needed for static site'",
+    "start": "npx live-server --port=8080",
     "serve": "npx http-server . -p 8080 -o"
   },
   "keywords": [
